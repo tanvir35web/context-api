@@ -7,6 +7,7 @@ const Cart = () => {
 
     return (
         <div className="text-center bg-yellow-50 p-4">
+            <p className="font-bold mb-2 border-b-2 pb-2 border-gray-500">Shopping-Cart</p>
             {cart &&
                 cart.item.map((product, index) => (
                     <li key={index} className="list-none">
