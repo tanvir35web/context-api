@@ -1,22 +1,17 @@
-import "./App.css";
-import Counter from "./components/Counter";
-import { useContext } from "react";
-import { CounterContextApi } from "./context/CounterContext";
-import ResetCounter from "./components/ResetCounter";
+import Cart from "./components/Cart";
+import Item from "./components/Item";
 
 function App() {
-
-  const counterContext = useContext(CounterContextApi)
-
     return (
-        <div className="p-10">
-            <h1 className="text-4xl mb-5 font-bold text-center">Count is {counterContext.count}</h1>
-            <Counter />
-            <Counter />
-            <Counter />
-            <Counter />
-            <ResetCounter />
-        </div>
+        <>
+            <div className="p-10 grid grid-cols-2">
+                <Item name="MacBook pro" price={1000} />
+                <Item name="iPhone 15 pro" price={1300} />
+                <Item name="Apple watch 8" price={600} />
+                <Item name="Apple Vision Pro" price={6000} />
+            </div>
+            <Cart />
+        </>
     );
 }
 
